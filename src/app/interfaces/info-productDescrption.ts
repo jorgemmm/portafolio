@@ -1,0 +1,11 @@
+//Detalle de Producto Utiliza desc1 en firebase para el precio
+export interface ProductDescription
+{
+  categoria: string;
+  desc1: string;
+  desc2: string;
+  producto: string;
+  resumen: string;
+  subtitulo1: string;
+  subtitulo2: string;
+}
