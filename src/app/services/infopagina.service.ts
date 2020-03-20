@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { InfoPagina } from '../interfaces/info-pagina.inyterface';
-import { InfoEquipo } from '../interfaces/info-equipo.interface';
+import { InfoPagina } from '../interfaces/info-pagina.interface';
+//import { InfoEquipo } from '../interfaces/info-equipo.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +17,10 @@ export class InfopaginaService {
  equipo: any={};
  //equipo : InfoEquipo[] = [];
  loadFirebase=false;
+
+
+ URLMyFireBase: string = "https://angular-html-4b67b.firebaseio.com";
+ URLPaypalFireBase: string = "https://angular-5b3e5.firebaseio.com";
 
   constructor(private http: HttpClient) { 
 
@@ -45,14 +49,15 @@ export class InfopaginaService {
 
   private cargarEquipo(){
 
-    
-    this.http.get('https://angular-html-4b67b.firebaseio.com/equipo.json')
-    .subscribe(  (resp: any[]) => { 
-                 //(resp: InfoEquipo[]) =>{
+    this.http.get(`${this.URLPaypalFireBase}/equipo.json`) 
+    //https://angular-5b3e5.firebaseio.com/equipo.json')
+    //this.http.get('https://angular-5b3e5.firebaseio.com/equipo.json')
+    .subscribe(  //(resp: any[]) => { 
 
-      //this.loadFirebase=true;
-      this.equipo=resp;
-      console.log(resp);
+        (resp: InfoPagina[]) =>{
+        //this.loadFirebase=true;
+        this.equipo=resp;
+        // console.log(resp);
       });
     }
 

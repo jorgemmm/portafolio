@@ -8,7 +8,13 @@ import { ProductosService } from 'src/app/services/productos.service';
 })
 export class PortafolioComponent implements OnInit {
 
-  constructor( public _productosServices: ProductosService) { }
+  masonry=false;
+  bootstrap:boolean;
+
+  constructor( public _productosServices: ProductosService) { 
+
+    this.bootstrap= this.masonry;
+  }
 
   ngOnInit(): void {
   }

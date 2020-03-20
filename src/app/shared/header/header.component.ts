@@ -9,8 +9,14 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
+
+  masonry=false;
+  bootstrap:boolean;
   constructor(public _services: InfopaginaService,
-                private router: Router  ) { }
+                private router: Router  ) { 
+
+                  this.bootstrap=this.masonry;
+                }
 
   ngOnInit(): void {
   }

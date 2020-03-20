@@ -1,14 +1,22 @@
 <section class="" *ngIf="productDetail" >
-    
+  <!-- [ngStyle]="{ 'background-image': 'url(assets/productos/'+ id +'/main.jpg)' }" -->
     <header 
-    [ngStyle]="{ 'background-image': 'url(assets/productos/'+ id +'/main.jpg)' }"
+    
+    [ngStyle]="{ 'background-image': 'url(assets/excursiones/'+ id +'/main.jpg)' }"
+    
     class="rk-portfolio-cover item-inside-1"   >
    
    
       <div class="item-inside__meta">
         <h1 class="ae-u-bolder rk-portfolio-title ">  {{ productDetail.producto }} </h1>
         <p class="ae-theta rk-portfolio-category ">   {{ productDetail.categoria }}</p>
+        <h1 *ngIf="!precioCargado" class="ae-u-bolder rk-portfolio-title ">  
+          <!-- {{ this.product.precio }} € -->
+          
+        </h1>
+        <!-- <p>{{_productServices.productos[ProdID].precio}}</p> -->
       </div>
+      
     </header>
 
     <div class="ae-container-fluid">
@@ -32,16 +40,37 @@
           <p class="ae-eta">{{ productDetail.desc1 }} </p>
          
         </div>
-        <div class="ae-grid__item item-lg-6 item-lg--offset-1"><img src="assets/productos/{{id }}/pic-1.jpg" alt="Urku Portfolio"></div>
-      </div>
-      <div class="ae-grid ae-grid--collapse">
-        <div class="ae-grid__item item-lg-8"><img src="assets/productos/{{ id }}/pic-2.jpg" alt="Urku Portfolio"></div>
-        <div class="ae-grid__item item-lg-3 item-lg--offset-1 au-lg-ptp-1">
-          <p>{{ productDetail.desc2 }} </p>         
-          <p class="ae-u-bolder">{{ productDetail.subtitulo2 }}</p>
-        </div>
+        <!-- <div class="ae-grid__item item-lg-6 item-lg--offset-1"><img src="assets/productos/{{id }}/pic-1.jpg" alt="Urku Portfolio"></div> -->
+        <div class="ae-grid__item item-lg-6 item-lg--offset-1"><img src="assets/excursiones/{{id }}/sunset-1.jpg" alt="Urku Portfolio"></div>
       </div>
 
+      <div class="ae-grid ae-grid--collapse">
+        <div class="ae-grid__item item-lg-8">
+          <!-- <div class="ae-grid__item item-lg-6"> -->
+          <!-- <img src="assets/productos/{{ id }}/pic-2.jpg" alt="Urku Portfolio"> -->
+          <img src="assets/excursiones/{{ id }}/sunset-2.jpg" alt="Urku Portfolio">
+        </div>
+
+        <div class="ae-grid__item item-lg-3 item-lg--offset-1 au-lg-ptp-1">
+          <!-- <div class="ae-grid__item item-lg-3 item-lg--offset-1 au-lg-ptp-1"> -->
+          <!-- <div class="ae-grid__item item-lg-3 "> -->
+          <p>{{ productDetail.desc2 }} </p>         
+          <p class="ae-u-bolder">{{ productDetail.subtitulo2 }}</p>
+        
+        </div>
+
+        
+
+      </div>
+
+      <br>
+      <br> 
+      <br>
+      <br>
+      <br>
+      <br> 
+      <br>
+      <br>
 
       <!-- <div class="ae-grid ae-grid--collapse au-xs-ptp-1 au-xs-pbp-1">
         <div class="ae-grid__item item-lg-8 item-lg--offset-2">
@@ -90,3 +119,40 @@
 
 
   </section>
+  <div   class="col-12 col-md-8 col-lg-8">
+      <!-- <p   *ngIf="!precioCargado" >{{ product.precio }} €</p> -->
+      <!-- <p>{{_productServices.productos[ProdID].precio}}</p> -->
+  </div>
+ 
+  <div  class="col-12 col-md-4 col-lg-4">
+
+    <div *ngIf="!paidFor">
+      <h1>Compralo ya ..!!</h1>
+      <h1>
+      Buy this service  - $ {{ product.precio}}  
+      </h1>
+      
+      <p>{{ product.titulo}}</p>
+      
+      <!-- <img width="400" [src] ="productPayme.img"> -->
+      
+      
+     </div>
+
+   <!-- <div id="paypal-button-container"  > -->
+   <div  #paypal>   <!-- <script
+        src="https://www.paypal.com/sdk/js?client-id=AfhVJNCZnF_6xgXN1w5peHbbvXBrif-dtabEyOgA9zA7ffHtSKiegcVOo0G8wYsRQ-4pB9gh5NqukT3c&currency=EUR"> 
+        </script> -->
+       <!-- <script src="js/SDKPaypal.js"></script> -->
+
+   </div>
+      
+        
+
+                                     
+       
+       
+
+
+     
+  </div>

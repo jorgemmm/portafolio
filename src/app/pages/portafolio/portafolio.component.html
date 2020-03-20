@@ -4,6 +4,19 @@
 
     <section class="ae-container-fluid ae-container-fluid--inner rk-portfolio">
       
+      
+      <div class="jumbotron">
+        <h1 class="display-4">Hikking on tenerife with gregorio´s Wanderfamily</h1>
+        <p class="lead">"We have been guiding our guests for 46 years to known and unknown places on the island of Tenerife."</p>
+        <hr class="my-4">
+        <p>Gregorio is a true "native" of Tenerife and a passionate hiker on his island. In 1972, Gregorio and his whole family began on Tenerife with guided tours for tourists. For this reason, Gregorio can be the only native hiking guide in Tenerife of himself and his family. In Puerto de la Cruz in the north of the island, there is hardly anyone who does not know Gregorio and his traveling family. Even among hiking enthusiasts who visit Tenerife, the name is well known. Today, the migrant family is continued by Victor, 
+          the son of Gregorio, who brings the tradition of the Wanderfamily into a new era.</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more about us</a>
+      </div>
+
+    
+    
+      
 
     <div align="center"  *ngIf="_productosServices.cargando">
       <h2> Cargando productos </h2>
@@ -31,25 +44,62 @@
       <p>Espere por favor</p>
 
     </div>
+
+
       
-
-      <div       
-         class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4"    *ngIf="!_productosServices.cargando"  >
-
-        <a    *ngFor="let producto of _productosServices.productos"
-        
-        routerLink="/item/{{ producto.cod }}" class="animated fadeIn rk-item ae-masonry__item"
-        
-        >
-          <img src="assets/productos/{{ producto.url }}.jpg" alt="">
-          <div  routerLink="/item/{{ producto.cod }}"       class="item-meta">
-             <h2>{{ producto.titulo }}</h2>
-             <p>{{ producto.categoria}}</p>
-          </div>
-        </a>
+      <div *ngIf="masonry" >
+          <div      
+            class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4"    *ngIf="!_productosServices.cargando"  >
           
-         
+            <a     *ngFor="let producto of _productosServices.productos"
+            
+            routerLink="/item/{{ producto.cod }}" class="animated fadeIn rk-item ae-masonry__item"
+            
+            >
+              <!-- <img src="assets/productos/{{ producto.url }}.jpg" alt=""> -->
+              <img src="assets/excursiones/{{ producto.url }}.jpg" alt="">
+                <div  routerLink="/item/{{ producto.cod }}"      class="item-meta">
+                    <h2>  {{ producto.titulo }}  </h2>
+                    <p>{{ producto.categoria}}</p>
+                    <br>
+                    <h5>precio : {{ producto.precio }} €</h5>
+            
+                </div>
+              
+            </a>
+              
+            
+          </div>
       </div>
+
+
+
+          <div *ngIf="!masonry" >
+            <div class="row">
+              <div   *ngFor="let producto of _productosServices.productos"  class="col">
+
+                <div class="card" style="width: 18rem;">
+                  <img src="assets/excursiones/{{ producto.url }}.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">  {{ producto.titulo }} </h5>
+                    <p class="card-text">{{ producto.categoria}}</p>
+                   
+                    <a routerLink="/item/{{ producto.cod }}" class="btn btn-primary">Comprar : {{ producto.precio }} €</a>
+                    <p></p>
+                    <a href="#" class="card-link">Reservar</a>
+                    
+                  </div>
+                </div>
+                <br><br>
+                <hr>
+              </div>
+              
+            </div>
+
+          </div>
+
+
+    
   
   
     </section>

@@ -15,23 +15,26 @@ export class ProductosService {
   searching=true;
   productos: Product[]= [];
   productoFiltrado: Product[] = [];
+  price: string[] = [];
   
   //productoSelected: string = {};
 
   URLMyFireBase: string = "https://angular-html-4b67b.firebaseio.com";
+  URLPaypalFireBase: string = "https://angular-5b3e5.firebaseio.com/";
 
   constructor(private http: HttpClient) { 
 
     this.cargarProductos();
   }
 
-
-    private cargarProductos() {
+//private inicialmente
+  private cargarProductos() {
 
       return new Promise ( (resolve, rejects)  =>{
-
-        this.http.get('https://angular-html-4b67b.firebaseio.com/productos_idx.json')
-        //this.http.get('{{URLMyFireBase}}/productos_idx.json')
+                    
+         this.http.get('https://angular-5b3e5.firebaseio.com/productos_idx.json')            
+        //this.http.get('https://angular-html-4b67b.firebaseio.com/productos_idx.json')
+        //this.http.get('{{URLPaypalFireBase}}/productos_idx.json')
                 .subscribe(    //(resp: any[] ) =>{
                               (resp: Product[] ) =>{              
 
@@ -48,13 +51,21 @@ export class ProductosService {
 
 
 
- //Public Default
-  getProducto(id: String){
+ //get product details descriptions
+  getProducto(id: string){
    
-    return this.http.get(`https://angular-html-4b67b.firebaseio.com/productos/${id}.json`)
-    
+    //return this.http.get(`https://angular-html-4b67b.firebaseio.com/productos/${id}.json`)
+    return this.http.get(`${this.URLPaypalFireBase}/productos/${id}.json`)
   }
 
+ // get product 
+  getProducto_Idx(id: string){
+   
+    //return this.http.get(`https://angular-html-4b67b.firebaseio.com/productos/${id}.json`)
+    return this.http.get(`${this.URLPaypalFireBase}/productos_idx/${id}.json`)
+  }
+
+   
   
  public searchProduct( termino:string){ 
 
