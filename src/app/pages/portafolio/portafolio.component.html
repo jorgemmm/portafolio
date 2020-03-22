@@ -1,18 +1,56 @@
 
 
+ <div id="carouselPromotionalImage" class="carousel slide" data-ride="carousel" data-interval="6000" >
+    <div class="carousel-inner">
+      
+       <div class="carousel-item active">   
+         
+          <div class="embed-responsive embed-responsive-16by9">        
+            <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/Yfje3I6dvMs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+     
+      <div class="carousel-item">
+         
+          <div class="embed-responsive embed-responsive-16by9">        
+            <iframe  class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/ObQCj1zxFD8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+      </div>
+      
+      
+      
+      <div class="carousel-item">                       
+        
+          <div class="embed-responsive embed-responsive-16by9"> 
+            <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/dcrsxcFwLZA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div> 
+      </div> 
 
+    </div>
+
+    <a class="carousel-control-prev" href="#carouselPromotionalImage" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselPromotionalImage" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+  </div>  
+
+  <div class="jumbotron">
+    <h1 class="display-4">Hikking on tenerife with gregorio´s Wanderfamily</h1>
+    <p class="lead">"We have been guiding our guests for 46 years to known and unknown places on the island of Tenerife."</p>
+    <hr class="my-4">
+    <p>Gregorio is a true "native" of Tenerife and a passionate hiker on his island. In 1972, Gregorio and his whole family began on Tenerife with guided tours for tourists. For this reason, Gregorio can be the only native hiking guide in Tenerife of himself and his family. In Puerto de la Cruz in the north of the island, there is hardly anyone who does not know Gregorio and his traveling family. Even among hiking enthusiasts who visit Tenerife, the name is well known. Today, the migrant family is continued by Victor, 
+      the son of Gregorio, who brings the tradition of the Wanderfamily into a new era.</p>
+    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more about us</a>
+  </div>
 
     <section class="ae-container-fluid ae-container-fluid--inner rk-portfolio">
       
       
-      <div class="jumbotron">
-        <h1 class="display-4">Hikking on tenerife with gregorio´s Wanderfamily</h1>
-        <p class="lead">"We have been guiding our guests for 46 years to known and unknown places on the island of Tenerife."</p>
-        <hr class="my-4">
-        <p>Gregorio is a true "native" of Tenerife and a passionate hiker on his island. In 1972, Gregorio and his whole family began on Tenerife with guided tours for tourists. For this reason, Gregorio can be the only native hiking guide in Tenerife of himself and his family. In Puerto de la Cruz in the north of the island, there is hardly anyone who does not know Gregorio and his traveling family. Even among hiking enthusiasts who visit Tenerife, the name is well known. Today, the migrant family is continued by Victor, 
-          the son of Gregorio, who brings the tradition of the Wanderfamily into a new era.</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more about us</a>
-      </div>
+     
 
     
     
@@ -74,12 +112,12 @@
 
 
 
-          <div *ngIf="!masonry" >
+          <div class="animated faseIn fast" *ngIf="!masonry" >
             <div class="row">
               <div   *ngFor="let producto of _productosServices.productos"  class="col">
 
                 <div class="card" style="width: 18rem;">
-                  <img src="assets/excursiones/{{ producto.url }}.jpg" class="card-img-top" alt="...">
+                  <img src="assets/excursiones/{{ producto.url }}.jpg" class="card-img-top rounded " alt="...">
                   <div class="card-body">
                     <h5 class="card-title">  {{ producto.titulo }} </h5>
                     <p class="card-text">{{ producto.categoria}}</p>

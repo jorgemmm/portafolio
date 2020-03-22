@@ -37,7 +37,7 @@
             <a routerLink="about" class="rk-menu__link">About</a>
           </li>
           
-          <li class="rk-menu__item"><a href="#0" class="rk-menu__link">Categorias</a>
+          <li class="rk-menu__item"><a href="#0" class="rk-menu__link">Hikes</a>
             <nav class="rk-menu__sub">
               <ul class="rk-container">
                 <li class="rk-menu__item">                   
@@ -113,11 +113,15 @@
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Categorías
+                Hiking
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" routerLink="search/anaga">Anaga</a>
-                <a class="dropdown-item" routerLink="search/papeleria">Papeleria</a>
+                <a class="dropdown-item" [routerLink]="['search','anaga']">Anaga</a>
+                <a class="dropdown-item" [routerLink]="['search','teide']">Teide</a>
+                <a class="dropdown-item" [routerLink]="['search','masca']">Masca & Teno</a>
+                <a class="dropdown-item" [routerLink]="['search','humbold']">Humbold</a>
+
+
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Something else here</a>
               </div>
@@ -132,8 +136,8 @@
             </li> -->
           </ul>
           <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" (keyup.enter) = "buscarProduct(txtBuscar.value)"  #txtBuscar>
+            <button (click)="buscarProduct(txtBuscar.value)" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           </form>
         </div>
       </nav>
@@ -149,20 +153,22 @@
     
 
 
- 
+  <!-- <img src="assets/img/inner-1.jpg" class="d-block w-100" > -->
+   <!-- <img src="assets/img/inner-2.jpg" class="d-block w-100"> -->
+   <!-- <img src="assets/img/inner-3.jpg" class="d-block w-100">  -->
 
-  <div id="carouselPromotionalImage" class="carousel slide" data-ride="carousel" data-interval="6000" >
+  <!-- <div id="carouselPromotionalImage" class="carousel slide" data-ride="carousel" data-interval="6000" >
     <div class="carousel-inner">
       
        <div class="carousel-item active">   
-          <!-- <img src="assets/img/inner-1.jpg" class="d-block w-100" > -->
+         
           <div class="embed-responsive embed-responsive-16by9">        
             <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/Yfje3I6dvMs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
      
       <div class="carousel-item">
-          <!-- <img src="assets/img/inner-2.jpg" class="d-block w-100"> -->
+         
           <div class="embed-responsive embed-responsive-16by9">        
             <iframe  class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/ObQCj1zxFD8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
@@ -171,7 +177,7 @@
       
       
       <div class="carousel-item">                       
-          <!-- <img src="assets/img/inner-3.jpg" class="d-block w-100">  -->
+        
           <div class="embed-responsive embed-responsive-16by9"> 
             <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/dcrsxcFwLZA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div> 
@@ -187,4 +193,4 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
-  </div>  
+  </div>   -->

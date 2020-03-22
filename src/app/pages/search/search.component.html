@@ -1,4 +1,6 @@
-<div align="center"  *ngIf="_productoService.searching"     >
+
+  <!-- mostrar si no carga -->
+  <div align="center"  *ngIf="_productoService.searching"     >
     <h2> Cargando productos </h2>
     
       <!-- SVG animattion -->
@@ -26,8 +28,7 @@
   </div>
     
 
-    <div       
-       class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4"    >
+    <div  class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4 animated fadeIn fast"    >
 
       <a    *ngFor="let producto of _productoService.productoFiltrado"
       

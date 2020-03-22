@@ -4,8 +4,8 @@ import { ProductosService } from 'src/app/services/productos.service';
 
 @Component({
   selector: 'app-search',
-  templateUrl: './search.component.html',
-  styles: []
+  templateUrl: './search.component.html'
+  //styles: []
 })
 export class SearchComponent implements OnInit {
 

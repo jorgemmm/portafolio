@@ -1,4 +1,4 @@
-<section class="" *ngIf="productDetail" >
+<section class="animated fadeIn fast" *ngIf="productDetail" >
   <!-- [ngStyle]="{ 'background-image': 'url(assets/productos/'+ id +'/main.jpg)' }" -->
     <header 
     
@@ -111,48 +111,69 @@
     
     
     <div class="ae-container-fluid au-pt-4 au-pb-4">
-      <div class="group-buttons"><a href="#0" class="au-mt-2 arrow-button arrow-button--right">Next Project<span class="arrow-cont">
+      <div class="group-buttons"><a href="#0" class="au-mt-2 arrow-button arrow-button--right">Next Hike<span class="arrow-cont">
             <svg>
               <use xlink:href="assets/img/symbols.svg#arrow"></use>
             </svg></span></a></div>
     </div>
 
+ </section>
+ 
+ <div class="container" >
+  <div class="row">
+    <div   class="col-1 ">
+    <!-- <p   *ngIf="!precioCargado" >{{ product.precio }} €</p> -->
+    <!-- <p>{{_productServices.productos[ProdID].precio}}</p> -->
+    </div>
 
-  </section>
-  <div   class="col-12 col-md-8 col-lg-8">
+    <!-- Formulario de reserva -->
+  <div  class="col-4 offset-1">
+
+      
+  <!-- <div id="paypal-button-container"  > -->
+  
+  </div>
+
+  
+  <div   class="col-1 ">
+    <!-- <p   *ngIf="!precioCargado" >{{ product.precio }} €</p> -->
+    <!-- <p>{{_productServices.productos[ProdID].precio}}</p> -->
+    </div>
+  
+  </div>
+    <div class="row">
+      <div   class="col-1 ">
       <!-- <p   *ngIf="!precioCargado" >{{ product.precio }} €</p> -->
       <!-- <p>{{_productServices.productos[ProdID].precio}}</p> -->
-  </div>
- 
-  <div  class="col-12 col-md-4 col-lg-4">
+      </div>
 
-    <div *ngIf="!paidFor">
-      <h1>Compralo ya ..!!</h1>
-      <h1>
-      Buy this service  - $ {{ product.precio}}  
-      </h1>
-      
-      <p>{{ product.titulo}}</p>
-      
-      <!-- <img width="400" [src] ="productPayme.img"> -->
-      
-      
-     </div>
+    <div  class="col-4 offset-1">
 
-   <!-- <div id="paypal-button-container"  > -->
-   <div  #paypal>   <!-- <script
-        src="https://www.paypal.com/sdk/js?client-id=AfhVJNCZnF_6xgXN1w5peHbbvXBrif-dtabEyOgA9zA7ffHtSKiegcVOo0G8wYsRQ-4pB9gh5NqukT3c&currency=EUR"> 
-        </script> -->
-       <!-- <script src="js/SDKPaypal.js"></script> -->
+        <div *ngIf="!paidFor">
+          <h1>Compralo ya ..!!</h1>
+          <h1>
+          Buy this service  - $ {{ product.precio}}  
+          </h1>
+          
+          <p>{{ product.titulo}}</p>    
+          <!-- <img width="400" [src] ="productPayme.img"> -->   
+        </div>
 
-   </div>
-      
-        
+    <!-- <div id="paypal-button-container"  > -->
+    
+    </div>
 
-                                     
-       
-       
+    <div class="col-3 offset-2"  #paypal>   <!-- <script
+      src="https://www.paypal.com/sdk/js?client-id=AfhVJNCZnF_6xgXN1w5peHbbvXBrif-dtabEyOgA9zA7ffHtSKiegcVOo0G8wYsRQ-4pB9gh5NqukT3c&currency=EUR"> 
+      </script> -->
+    <!-- <script src="js/SDKPaypal.js"></script> -->
 
+    </div>  
+    <div   class="col-1 ">
+      <!-- <p   *ngIf="!precioCargado" >{{ product.precio }} €</p> -->
+      <!-- <p>{{_productServices.productos[ProdID].precio}}</p> -->
+      </div>
+    
+    </div>
+ </div>
 
-     
-  </div>
