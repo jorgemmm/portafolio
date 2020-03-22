@@ -6,6 +6,7 @@ import { Product } from 'src/app/interfaces/info-product.interface';
 import { productPayme } from 'src/app/interfaces/info-productpayme.interface';
 
 declare var paypal;
+const NUM_MAX_PROD:number=11;
 
 @Component({
   selector: 'app-item',
@@ -15,6 +16,9 @@ declare var paypal;
 export class ItemComponent implements OnInit {
   
   @ViewChild('paypal', {static: true}) paypayElement: ElementRef
+
+
+  
 
   paidFor=false;
 
@@ -81,14 +85,18 @@ export class ItemComponent implements OnInit {
       this.route.params
           .subscribe(parametros=>{
             //console.log(parametros);
-             var myIdx  =  parametros['id'].charAt( parametros['id'].length -1);
+             let myIdx:number  =  parametros['id'].charAt( parametros['id'].length -1);
             
-            console.log(myIdx);
+            console.log(parametros['id']);
             //myIdx=(myIdx)/1 -1;
-            if (myIdx<=0) myIdx=0;
+            
+            myIdx--;
 
-            console.log(myIdx);
-             this._productServices.getProducto_Idx(myIdx)
+            if (myIdx<=0) myIdx=0;
+            if (myIdx>=NUM_MAX_PROD) myIdx=NUM_MAX_PROD;
+
+            console.log(myIdx.toString());
+             this._productServices.getProducto_Idx(myIdx.toString())
               .subscribe( (productidx:Product ) => {
                     
                console.log(productidx);
