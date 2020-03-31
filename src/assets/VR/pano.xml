@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tour appversion="5.2.5" apprev="15998" start="node1">
+  <panorama id="node1">
+    <input levelbiashidpi="0.400" leveltileurl="tiles/node1/cf_%c/l_%l/c_%x/tile_%y.jpg" levelbias="0.400" levelingroll="0" levelingpitch="0" width="512" overlap="1" height="512" leveltilesize="510">
+      <level predecode="0" width="512" height="512" preload="0"/>
+      <level predecode="1" width="256" height="256" preload="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start tilt="0" fov="70" pan="0" projection="4"/>
+      <flyin tilt="-90" fov="170" pan="0" projection="9"/>
+      <min tilt="-35.0316" fov="5" pan="-180"/>
+      <max fovstereographic="270" fovfisheye="360" tilt="35.0316" fov="120" pan="180"/>
+    </view>
+    <userdata info="" description="" longitude="" author="" copyright="" customnodeid="" comment="" source="" title="teide_1" latitude="" datetime="" tags="Pan2Vr"/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label background="1" borderalpha="1" enabled="1" backgroundcolor="0xffffff" borderradius="1" border="1" width="180" textcolor="0x000000" wordwrap="1" height="20" textalpha="1" bordercolor="0x000000" backgroundalpha="1"/>
+      <polystyle mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" bordercolor="0x0000ff" backgroundalpha="0.2509803921568627"/>
+      <hotspot target="" description="" tilt="1.7" url="{node2}" skinid="ht_node" pan="154.82" title="Hide to teide" id="Point01"/>
+    </hotspots>
+    <media/>
+    <transition type="crossdissolve" zoomfov="20" enabled="0" zoomin="0" zoomoutpause="1" blendtime="1" blendcolor="0x000000" softedge="0" zoomspeed="2" zoomout="0"/>
+    <control invertcontrol="1" speedwheel="1" dblclickfullscreen="0" rubberband="0" hideabout="0" lockedkeyboardzoom="0" simulatemass="1" lockedmouse="0" contextprojections="0" contextfullscreen="0" sensitivity="8" lockedkeyboard="0" invertwheel="0" lockedwheel="0"/>
+  </panorama>
+  <panorama id="node2">
+    <input levelbiashidpi="0.400" leveltileurl="tiles/node2/cf_%c/l_%l/c_%x/tile_%y.jpg" levelbias="0.400" levelingroll="0" levelingpitch="0" width="512" overlap="1" height="512" leveltilesize="510">
+      <level predecode="0" width="512" height="512" preload="0"/>
+      <level predecode="1" width="256" height="256" preload="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start tilt="0" fov="70" pan="0" projection="4"/>
+      <flyin tilt="-90" fov="170" pan="0" projection="9"/>
+      <min tilt="-40.2565" fov="5" pan="-180"/>
+      <max fovstereographic="270" fovfisheye="360" tilt="40.2565" fov="120" pan="180"/>
+    </view>
+    <userdata info="" description="" longitude="" author="" copyright="" customnodeid="" comment="" source="" title="teide_2" latitude="" datetime="" tags="Program Files"/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label background="1" borderalpha="1" enabled="1" backgroundcolor="0xffffff" borderradius="1" border="1" width="180" textcolor="0x000000" wordwrap="1" height="20" textalpha="1" bordercolor="0x000000" backgroundalpha="1"/>
+      <polystyle mode="0" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" bordercolor="0x0000ff" backgroundalpha="0.2509803921568627"/>
+      <hotspot target="" description="" tilt="-14.22" url="{node1}" skinid="ht_node" pan="-168.65" title="Comeback to shelter" id="Point01"/>
+    </hotspots>
+    <media/>
+    <transition type="crossdissolve" zoomfov="20" enabled="0" zoomin="0" zoomoutpause="1" blendtime="1" blendcolor="0x000000" softedge="0" zoomspeed="2" zoomout="0"/>
+    <control invertcontrol="1" speedwheel="1" dblclickfullscreen="0" rubberband="0" hideabout="0" lockedkeyboardzoom="0" simulatemass="1" lockedmouse="0" contextprojections="0" contextfullscreen="0" sensitivity="8" lockedkeyboard="0" invertwheel="0" lockedwheel="0"/>
+  </panorama>
+</tour>

@@ -8,8 +8,8 @@
    
    
       <div class="item-inside__meta">
-        <h1 class="ae-u-bolder rk-portfolio-title ">  {{ productDetail.producto }} </h1>
-        <p class="ae-theta rk-portfolio-category ">   {{ productDetail.categoria }}</p>
+        <h1 class="ae-u-bolder rk-portfolio-title"> <p class="p-lead" >{{ productDetail.producto  }}</p>    </h1>
+        <p class="ae-theta rk-portfolio-category p-lead">   {{ productDetail.categoria }}</p>
         <h1 *ngIf="!precioCargado" class="ae-u-bolder rk-portfolio-title ">  
           <!-- {{ this.product.precio }} € -->
           
@@ -26,8 +26,8 @@
         </div>
         <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-right rk-portfolio-details">
           <p class="rk-portfolio-inner-client "><span class="ae-lambda">Client: </span><span class="ae-u-bolder">Agency Design Studio</span></p>
-          <p class="au-underline rk-portfolio-inner-website "><a href="#0" class="ae-kappa">www.agencydesign.com</a></p>
-          <p class="ae-kappa ae-u-bold rk-portfolio-inner-date ">12 August, 2015</p>
+          <p class="au-underline rk-portfolio-inner-website "><a href="#0" class="ae-kappa">www.vicagent.com</a></p>
+          <p class="ae-kappa ae-u-bold rk-portfolio-inner-date ">{{ fecha | date:'dd-MMMM-yyyy'}}</p>
         </div>
       </div>
     </div>
@@ -36,8 +36,8 @@
       
       <div class="ae-grid ae-grid--collapse au-xs-ptp-1">
         <div class="ae-grid__item item-lg-5 au-lg-ptp-1">
-          <h4 class="ae-u-bolder">{{ productDetail.subtitulo1 }}</h4>
-          <p class="ae-eta">{{ productDetail.desc1 }} </p>
+          <h4 class="ae-u-bolder">{{ productDetail.subtitulo2 }}</h4>
+          <p class="ae-eta">{{ productDetail.desc2  }} </p>
          
         </div>
         <!-- <div class="ae-grid__item item-lg-6 item-lg--offset-1"><img src="assets/productos/{{id }}/pic-1.jpg" alt="Urku Portfolio"></div> -->
@@ -45,7 +45,7 @@
       </div>
 
       <div class="ae-grid ae-grid--collapse">
-        <div class="ae-grid__item item-lg-8">
+        <div class="ae-grid__item item-lg-8 mt-3">
           <!-- <div class="ae-grid__item item-lg-6"> -->
           <!-- <img src="assets/productos/{{ id }}/pic-2.jpg" alt="Urku Portfolio"> -->
           <img src="assets/excursiones/{{ id }}/sunset-2.jpg" alt="Urku Portfolio">
@@ -54,8 +54,8 @@
         <div class="ae-grid__item item-lg-3 item-lg--offset-1 au-lg-ptp-1">
           <!-- <div class="ae-grid__item item-lg-3 item-lg--offset-1 au-lg-ptp-1"> -->
           <!-- <div class="ae-grid__item item-lg-3 "> -->
-          <p>{{ productDetail.desc2 }} </p>         
-          <p class="ae-u-bolder">{{ productDetail.subtitulo2 }}</p>
+          <p>{{ productDetail.desc1 }} </p>         
+          <p class="ae-u-bolder">{{ productDetail.subtitulo1 }}</p>
         
         </div>
 
@@ -63,14 +63,7 @@
 
       </div>
 
-      <br>
-      <br> 
-      <br>
-      <br>
-      <br>
-      <br> 
-      <br>
-      <br>
+      
 
       <!-- <div class="ae-grid ae-grid--collapse au-xs-ptp-1 au-xs-pbp-1">
         <div class="ae-grid__item item-lg-8 item-lg--offset-2">
@@ -119,7 +112,7 @@
 
  </section>
  
- <div class="container" >
+ <div class="container mt-4" >
   <div class="row">
     <div   class="col-1 ">
     <!-- <p   *ngIf="!precioCargado" >{{ product.precio }} €</p> -->

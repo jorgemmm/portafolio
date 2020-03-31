@@ -62,11 +62,11 @@
        
        </ul>
 
-
+       <!-- (keyup.enter) = "buscarProduct(txtBuscar.value)" -->
         <div class="rk-search">
          
           <input type="text" 
-              (keyup.enter) = "buscarProduct(txtBuscar.value)"
+              (keyup) = "buscarProduct(txtBuscar.value)"
 
               placeholder="Buscar.." 
               id="urku-search"               
@@ -133,10 +133,14 @@
   
             <!-- <li routerLinkActive="active" class="nav-item">
               <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"   routerLink="about" >About</a>
-            </li> -->
+            </li>
+          
+
+            (keyup.enter)
+          -->
           </ul>
           <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" (keyup.enter) = "buscarProduct(txtBuscar.value)"  #txtBuscar>
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" (keyup) = "buscarProduct(txtBuscar.value)"  #txtBuscar>
             <button (click)="buscarProduct(txtBuscar.value)" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           </form>
         </div>

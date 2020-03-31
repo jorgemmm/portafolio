@@ -77,3 +77,55 @@
   svg rect{
     fill: black;
   }
+
+
+
+
+/*----------------------------------------
+SOBREESCRIBIENDO  LOS ESTILOS DE BOOTSTRAP
+------------------------------------------*/
+  
+.bg-primary-card {
+  background-color: #b8ae2b !important;
+}
+
+
+.card:hover {
+  -webkit-box-shadow: 0 0 10px #0c0c0c3b;
+          box-shadow: 0 0 10px #0c0c0c3b;
+}
+
+
+
+
+
+
+/*--------------------------
+ESTILOS DEL DISEÑO fuentes cargadas de google
+---------------------------*/
+/* 
+html {
+  font-size: 13px;
+} */
+
+body {
+  /* color: #072736; */
+  font-family: 'Open Sans', sans-serif;
+} 
+
+p {
+  font-size: 1rem;
+  font-style: italic;
+  font-family: 'Courier New', Courier, monospace;
+} 
+
+.p-lead{
+  font-size: 5rem; 
+  font-family: 'Roboto Slab', serif;
+  color: bisque;
+}
+/* 
+h1 { 
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+} */
+

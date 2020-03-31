@@ -38,7 +38,7 @@
       </a>
   </div>  
 
-  <div class="jumbotron">
+  <div class="jumbotron ">
     <h1 class="display-4">Hikking on tenerife with gregorio´s Wanderfamily</h1>
     <p class="lead">"We have been guiding our guests for 46 years to known and unknown places on the island of Tenerife."</p>
     <hr class="my-4">
@@ -84,6 +84,7 @@
     </div>
 
 
+    <!-- Template masonry -->
       
       <div *ngIf="masonry" >
           <div      
@@ -111,25 +112,30 @@
       </div>
 
 
-
+  <!-- bootstrap 4 -->
           <div class="animated faseIn fast" *ngIf="!masonry" >
             <div class="row">
-              <div   *ngFor="let producto of _productosServices.productos"  class="col">
+              
+              <div class="col mt-3"  *ngFor="let producto of _productosServices.productos;let i=index"     > 
 
-                <div class="card" style="width: 18rem;">
+                <div  *ngIf="i<11"  class="card" style="width: 18rem;">
                   <img src="assets/excursiones/{{ producto.url }}.jpg" class="card-img-top rounded " alt="...">
-                  <div class="card-body">
+                  <div class="card-body bg-primary-card">
                     <h5 class="card-title">  {{ producto.titulo }} </h5>
                     <p class="card-text">{{ producto.categoria}}</p>
                    
-                    <a routerLink="/item/{{ producto.cod }}" class="btn btn-primary">Comprar : {{ producto.precio }} €</a>
+                    <a routerLink="/item/{{ producto.cod }}" class="btn btn-primary btn-block"> Buy : {{ producto.precio }} €</a>
                     <p></p>
-                    <a href="#" class="card-link">Reservar</a>
+                    <a routerLink="/item/{{ producto.cod }}"   class="btn btn-success btn-block"> book </a>
                     
                   </div>
                 </div>
-                <br><br>
-                <hr>
+                <!-- 
+                  USAR CLASS = "CARD-COLUMNS"
+                  class="card-columns"
+                  <br><br>
+                <hr> -->
+              
               </div>
               
             </div>

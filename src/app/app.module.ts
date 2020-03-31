@@ -1,8 +1,18 @@
 
 //NameSpaces : Libraríes, imports 
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule }      from '@angular/core';
+import { NgModule, LOCALE_ID }      from '@angular/core';
 import {HttpClientModule} from '@angular/common/http'
+
+//Core Culture localizations
+import localEs from '@angular/common/locales/es';
+import localFr from '@angular/common/locales/fr';
+import localDe from '@angular/common/locales/de';
+
+import { registerLocaleData } from '@angular/common';
+
+// the second parameter 'fr-FR' is optional
+
 
 //Rutas
 import { AppRoutingModule } from './app-routing.module';
@@ -18,6 +28,11 @@ import { SearchComponent } from './pages/search/search.component';
 import { PaymeComponent } from './payme/payme.component';
 
 
+
+//Español, 
+registerLocaleData(localEs);//, 'es-ES');
+registerLocaleData(localFr);//, 'es-ES');
+registerLocaleData(localDe);//, 'es-ES');
 
 @NgModule({
   declarations: [
@@ -35,7 +50,10 @@ import { PaymeComponent } from './payme/payme.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ {
+    provide: LOCALE_ID,
+    useValue: 'es'
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

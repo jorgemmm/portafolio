@@ -28,13 +28,14 @@
   </div>
     
 
-    <div  class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4 animated fadeIn fast"    >
+    <div  class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4   animated fadeIn fast"    >
 
-      <a    *ngFor="let producto of _productoService.productoFiltrado"
-      
-      routerLink="/item/{{ producto.cod }}" class="animated fadeIn rk-item ae-masonry__item"
-      
+
+      <a *ngFor="let producto of _productoService.productoFiltrado"      
+      routerLink="/item/{{ producto.cod }}" 
+      class="animated fadeIn rk-item ae-masonry__item"      
       >
+
        <!-- <img src="assets/productos/{{ producto.url }}.jpg" alt=""> -->
        <img src="assets/excursiones/{{ producto.url }}.jpg" alt="">
         

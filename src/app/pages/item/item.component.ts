@@ -45,7 +45,7 @@ export class ItemComponent implements OnInit {
   };
  
 
- 
+ fecha=new Date();
 
 
   constructor(private route: ActivatedRoute, 
@@ -56,6 +56,8 @@ export class ItemComponent implements OnInit {
  
 
   ngOnInit(): void {
+
+    
 
     this.route.params
           .subscribe(parametros=>{
