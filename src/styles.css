@@ -86,19 +86,88 @@ SOBREESCRIBIENDO  LOS ESTILOS DE BOOTSTRAP
 ------------------------------------------*/
   
 .bg-primary-card {
-  background-color: #b8ae2b !important;
+  background-color: bisque;
 }
 
 
 .card:hover {
-  -webkit-box-shadow: 0 0 10px #0c0c0c3b;
-          box-shadow: 0 0 10px #0c0c0c3b;
+  -webkit-box-shadow: 0 0 10px #fffdfd3b;
+          box-shadow: 0 0 20px #a1b99a3b;
+}
+
+
+.card-title,
+.card-text {
+  color: black;
 }
 
 
 
+.btn-primary {
+  background-color: #21a3dfc5 !important;
+  border-color: #656018 !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #8f8721 !important;
+}
+
+.btn-primary:active {
+  background-color: #656018 !important;
+  border-color: #3c390e !important;
+}
+
+.btn-primary:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(184, 174, 43, 0.5) !important;
+          box-shadow: 0 0 0 0.2rem rgba(184, 174, 43, 0.5) !important;
+}
 
 
+/* succes */
+
+.btn-success {
+  background-color: #6edd3ace !important;
+  border-color: #c0c3e0 !important;
+}
+
+.btn-success:hover,
+.btn-success:focus {
+  background-color: #8f8721 !important;
+}
+
+.btn-success:active {
+  background-color: #656018 !important;
+  border-color: #3c390e !important;
+}
+
+.btn-success:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(200, 203, 235, 0.5) !important;
+          box-shadow: 0 0 0 0.2rem rgba(200, 203, 235, 0.5) !important;
+}
+
+
+
+/* warning */
+.btn-warning {
+  background-color: #ebdf3ebe !important;
+  border-color: #5861c2 !important;
+}
+
+.btn-warning:hover,
+.btn-warning:focus {
+  background-color: #1d6a53 !important;
+}
+
+.btn-warning:active {
+  background-color: #124233 !important;
+  border-color: #5861c2 !important;
+}
+
+.btn-warning:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(200, 203, 235, 0.5) !important;
+          box-shadow: 0 0 0 0.2rem rgba(200, 203, 235, 0.5) !important;
+}
 
 /*--------------------------
 ESTILOS DEL DISEÑO fuentes cargadas de google
@@ -108,10 +177,6 @@ html {
   font-size: 13px;
 } */
 
-body {
-  /* color: #072736; */
-  font-family: 'Open Sans', sans-serif;
-} 
 
 p {
   font-size: 1rem;
@@ -129,3 +194,31 @@ h1 {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 } */
 
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: black;  
+  color: white !important;
+}
+/* 
+body { 
+ 
+}  
+*/
+.jumbotron{
+  background-color: black; 
+  color: white !important;
+}
+
+hr {
+   border-color: white; 
+}
+
+.puntero {
+  cursor: pointer;
+}
+
+.img-circle {
+  border-radius: 100%;
+  width: 150px;
+}

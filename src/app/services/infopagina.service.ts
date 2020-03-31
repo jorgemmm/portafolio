@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { InfoPagina } from '../interfaces/info-pagina.interface';
+import { InfoContact } from '../interfaces/info-contact.interface';
 //import { InfoEquipo } from '../interfaces/info-equipo.interface';
 
 @Injectable({
@@ -10,7 +11,10 @@ export class InfopaginaService {
 
 
  //TS para cargar info de página
- info: InfoPagina = {} ;
+ info: InfoPagina = {};
+
+ infocontact:InfoContact={};
+
  load = false; //Cargada en curso
 
  //TS para cargar información de firebase
@@ -36,7 +40,7 @@ export class InfopaginaService {
   private cargarInfo(){
 
       this.http.get('assets/data/data-pagina.json')
-      .subscribe( (resp: InfoPagina) => {
+      .subscribe( (resp:InfoPagina ) => {
           
           //console.log(resp);
           //console.log( resp['twitter'] );
@@ -45,6 +49,18 @@ export class InfopaginaService {
           //console.log(resp);
 
       });
+
+      this.http.get('assets/data/data-contacto.json')
+      .subscribe( (resp:InfoContact ) => {
+          
+          //console.log(resp);
+          //console.log( resp['twitter'] );
+          this.load =true;
+          this.infocontact = resp;
+          //console.log(resp);
+
+      });
+
   }
 
   private cargarEquipo(){
