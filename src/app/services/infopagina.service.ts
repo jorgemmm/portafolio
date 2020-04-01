@@ -53,8 +53,8 @@ export class InfopaginaService {
       this.http.get('assets/data/data-contacto.json')
       .subscribe( (resp:InfoContact ) => {
           
-          //console.log(resp);
-          //console.log( resp['twitter'] );
+         // console.log(resp);
+          //console.log( resp['facebook'] );
           this.load =true;
           this.infocontact = resp;
           //console.log(resp);

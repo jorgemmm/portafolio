@@ -8,6 +8,8 @@ import { ProductosService } from 'src/app/services/productos.service';
 })
 export class PortafolioComponent implements OnInit {
 
+  Num_Max_Prod:number=11; //semicte
+
   masonry=false;
   bootstrap:boolean;
 
@@ -17,6 +19,7 @@ export class PortafolioComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.Num_Max_Prod = this._productosServices.numMaxProductos;
   }
 
 }

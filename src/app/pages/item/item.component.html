@@ -113,16 +113,15 @@
  </section>
  
  <div class="container mt-4" >
-  <div class="row">
-    <div   class="col-1 ">
-    <!-- <p   *ngIf="!precioCargado" >{{ product.precio }} €</p> -->
-    <!-- <p>{{_productServices.productos[ProdID].precio}}</p> -->
-    </div>
+  
+  <!-- booking -->
+  <div class="row" *ngIf="isBooking" >
+    
 
     <!-- Formulario de reserva -->
-  <div  class="col-4 offset-1">
+  <div  class="col-8 offset-1">
 
-      
+      <app-contact  [hike]="product.titulo" [product]="product" ></app-contact>
   <!-- <div id="paypal-button-container"  > -->
   
   </div>
@@ -134,39 +133,50 @@
     </div>
   
   </div>
-    <div class="row">
-      <div   class="col-1 ">
-      <!-- <p   *ngIf="!precioCargado" >{{ product.precio }} €</p> -->
-      <!-- <p>{{_productServices.productos[ProdID].precio}}</p> -->
-      </div>
 
-    <div  class="col-4 offset-1">
 
-        <div *ngIf="!paidFor">
-          <h1>Compralo ya ..!!</h1>
-          <h1>
-          Buy this service  - $ {{ product.precio}}  
-          </h1>
-          
-          <p>{{ product.titulo}}</p>    
-          <!-- <img width="400" [src] ="productPayme.img"> -->   
+  <hr>
+                      <!-- *ngIf="isBooking" !isBooking por code -->
+    <div class="row mt-10" >
+        <div   class="col-1 ">
+        <!-- <p   *ngIf="!precioCargado" >{{ product.precio }} €</p> -->
+        <!-- <p>{{_productServices.productos[ProdID].precio}}</p> -->
         </div>
 
-    <!-- <div id="paypal-button-container"  > -->
+      
+      <div  class="col-4 offset-1">
+
+          <div *ngIf="!paidFor">
+            <h2>Compralo ya ..!!</h2>
+            <h2>
+            Buy this Hike  : $ {{ product.precio}}  
+            </h2>
+            
+            <p>{{ product.titulo}}</p>    
+            <!-- <img width="400" [src] ="productPayme.img">    -->
+          </div>
+     </div>
+
+    <div id="paypal-button-container"  >
     
     </div>
 
-    <div class="col-3 offset-2"  #paypal>   <!-- <script
+    <div class="col-3 offset-2"  #paypal>  
+       <!-- <script
       src="https://www.paypal.com/sdk/js?client-id=AfhVJNCZnF_6xgXN1w5peHbbvXBrif-dtabEyOgA9zA7ffHtSKiegcVOo0G8wYsRQ-4pB9gh5NqukT3c&currency=EUR"> 
-      </script> -->
-    <!-- <script src="js/SDKPaypal.js"></script> -->
+      </script> 
+    <script src="js/SDKPaypal.js"></script> -->
 
     </div>  
     <div   class="col-1 ">
       <!-- <p   *ngIf="!precioCargado" >{{ product.precio }} €</p> -->
       <!-- <p>{{_productServices.productos[ProdID].precio}}</p> -->
-      </div>
+    </div>
     
     </div>
+
+
+
+
  </div>
 

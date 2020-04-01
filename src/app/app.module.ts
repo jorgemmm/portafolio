@@ -2,6 +2,7 @@
 //NameSpaces : Libraríes, imports 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID }      from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http'
 
 //Core Culture localizations
@@ -26,6 +27,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { ItemComponent } from './pages/item/item.component';
 import { SearchComponent } from './pages/search/search.component';
 import { PaymeComponent } from './payme/payme.component';
+import { ContactComponent } from './shared/contact/contact.component';
 
 
 
@@ -43,11 +45,13 @@ registerLocaleData(localDe);//, 'es-ES');
     AboutComponent,
     ItemComponent,
     SearchComponent,
-    PaymeComponent
+    PaymeComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     HttpClientModule
   ],
   providers: [ {

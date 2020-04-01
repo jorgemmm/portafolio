@@ -6,11 +6,16 @@ import { promise } from 'protractor';
 import { resolve } from 'dns';
 import { rejects } from 'assert';
 
+
+export const NUM_MAX_PROD:number=11;
+
 @Injectable({
   providedIn: 'root'
 })
 export class ProductosService {
-
+  
+  
+  numMaxProductos:number=NUM_MAX_PROD;
   cargando= true;
   searching=true;
   productos: Product[]= [];
@@ -38,7 +43,7 @@ export class ProductosService {
                 .subscribe(    //(resp: any[] ) =>{
                               (resp: Product[] ) =>{              
 
-                              console.log(resp);
+                              //console.log(resp);
                               this.productos=resp;
                               this.cargando=false;
 

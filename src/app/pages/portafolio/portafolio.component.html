@@ -118,7 +118,7 @@
               
               <div class="col mt-3"  *ngFor="let producto of _productosServices.productos;let i=index"     > 
 
-                <div  *ngIf="i<11"  class="card" style="width: 18rem;">
+                <div  *ngIf="i<Num_Max_Prod"  class="card" style="width: 18rem;">
                   <img src="assets/excursiones/{{ producto.url }}.jpg" class="card-img-top rounded " alt="...">
                   <div class="card-body bg-primary-card">
                     <h5 class="card-title">  {{ producto.titulo }} </h5>

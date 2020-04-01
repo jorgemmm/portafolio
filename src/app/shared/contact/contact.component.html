@@ -1,0 +1,133 @@
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-2">
+
+    </div>
+    <div class="col-8">
+      <h1 > {{ hike  }}</h1>
+    </div>
+    <div class="col-2">
+      <h2 > {{ product.precio | currency:'EUR'  }}</h2>
+    </div>
+  </div>
+</div>
+<hr>
+
+<form autocomplete="off"  (ngSubmit)="enviarSiGuardado(forma )"   (keyup) ="guardar( forma )"  #forma="ngForm">
+    <!-- pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" -->
+    <div>
+  
+      <div class="form-group row">
+        <label class="col-2 col-form-label">Nombre</label>
+        <div class="col-8">
+          <!-- "nombre.invalid" -->
+          <input class="form-control"
+                 type="text"
+                 placeholder="Nombre"
+                 name="nombre"
+                 [class.is-invalid]="nombre.invalid && nombre.touched"
+                 [ngModel] ="usuario.nombre"              
+                 required minlength="5" maxlength="100"
+                 #nombre="ngModel">
+                 <small 
+                 class="form-text text-danger"
+                 *ngIf="nombre.invalid && nombre.touched"
+                 >el nombre debe tener min 5 y max 100 letras
+                </small>    
+        </div>
+      </div>
+  
+      <div class="form-group row">
+        <label class="col-2 col-form-label">Apellido</label>
+        <div class="col-8">
+  
+          <input class="form-control"
+                 type="text"
+                 placeholder="Apellido"
+                 name="Apellido"
+                 [class.is-invalid]="apellido.invalid && apellido.touched"
+                 [ngModel] ="usuario.apellido"
+                 
+                 required minlength="5" maxlength="100"
+                 #apellido="ngModel"
+                 >
+                 <small 
+                 class="form-text text-danger"
+                 *ngIf="apellido.invalid && apellido.touched"
+                 >el nombre debe tener min 5 y max 100 letras
+                </small>  
+                
+           
+        </div>
+      </div>
+  
+    </div>
+  
+    <div class="form-group row">
+      <label class="col-2 col-form-label">Correo</label>
+      <div class="col-8">
+  
+        <input class="form-control"
+               type="email"
+               placeholder="Correo electrónico"
+               name="Correo"
+               [class.is-invalid]="correo.invalid && correo.touched"
+               [ngModel] ="usuario.correo"
+               
+               required
+               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+               #correo="ngModel">
+  
+               <small 
+               class="form-text text-danger"
+               *ngIf="correo.invalid && correo.touched"
+               >El correo es obliagorio, usa un formato correcto
+              </small> 
+      </div>
+    </div>
+    <!-- pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" -->
+    <div class="form-group row">
+      <label class="col-2 col-form-label">Fecha</label>
+      <div class="col-8">
+  
+        <input class="form-control"
+               type="date"
+               placeholder="Fecha"
+               name="Fecha"
+               [class.is-invalid]="Fecha.invalid && Fecha.touched"
+               [ngModel] ="usuario.date"
+               pattern="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))" required
+  
+               #Fecha="ngModel">
+               <small 
+               class="form-text text-danger"
+               *ngIf="Fecha.invalid && Fecha.touched"
+               >La Fecha es obliagorio
+              </small> 
+      </div>
+    </div>
+  
+    <div class="form-group row">
+      <label class="col-2 col-form-label">&nbsp;</label>
+      <div class="input-group col-md-8">
+        <button type="submit"   class="btn btn-outline-primary btn-block">
+          Enviar
+        </button>
+
+        
+       
+        <!-- <a type="submit"   href ="mailTo:{{ _services.infocontact.email }}?subject={{ asunto }}&body={{ mensaje }}"     class="btn btn-outline-primary btn-block">         -->
+         
+        
+          <!-- {{  _services.infocontact.email  }} -->
+         
+
+         <!-- </a>  -->
+
+      </div>
+    </div>
+  
+  </form>
+  

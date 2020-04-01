@@ -10,10 +10,11 @@ declare var paypal;
   styleUrls: ['./payme.component.css']
 })
 export class PaymeComponent implements OnInit {
-    
-    @ViewChild('paypal', {static: true}) paypayElement: ElementRef
 
-paidFor=false;
+    
+@ViewChild('paypal', {static: true}) paypayElement: ElementRef
+
+ paidFor=false;
 
  product: productPayme=
 
