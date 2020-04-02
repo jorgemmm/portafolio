@@ -21,10 +21,12 @@ export class ContactComponent implements OnInit {
 
   @Input() product:Product={};
   @Input() hike:any={};
+  @Input() price:any={};
+  @Input() days:any={};
   usuario:customerbook ={
-    nombre: 'Yasinayda',
+    nombre: 'Jorge',
     apellido:'López',
-    correo: 'yasinayda@hotmail.com',
+    correo: 'miCorreo@MiDominio.com',
     date :  new Date()
   }
 
@@ -32,6 +34,7 @@ export class ContactComponent implements OnInit {
 
   mailto:string;
   asunto:string;
+  mensajeESP:string;
   mensaje:string;
 
 
@@ -78,6 +81,7 @@ export class ContactComponent implements OnInit {
         console.log(this.usuario.apellido);
         console.log(this.fecha);
         console.log(this.usuario.date);
+        console.log(this.days);
 
         //mailTo:{{ _services.infocontact.email }}&subject=Reserva&body=hola
         
@@ -86,8 +90,9 @@ export class ContactComponent implements OnInit {
 
         //this.mensaje=`Cuerpo${ ESP }del${ ESP }mensaje`;
 
-        // let arr = new Array(this.usuario.nombre,formulario.value.Apellido,this.usuario.date,this.product.titulo); 
-        // this.mensaje=arr.join(ESP);
+        
+        let arr = new Array(this.usuario.nombre,formulario.value.Apellido,formulario.value.Correo,this.usuario.date,this.product.titulo, this.days, this.price, this.hike); 
+        this.mensajeESP=arr.join(ESP);
 
         this.mensaje=`${this.usuario.nombre}${ ESP }${ formulario.value.Apellido }${ ESP }reservó${ ESP }una${ ESP }ruta${ ESP }para${ ESP }la${ ESP }fecha${ ESP }${this.fecha}
         ${ ESP }${this.product.titulo}`;
@@ -96,9 +101,10 @@ export class ContactComponent implements OnInit {
          
         console.log( this.asunto);
         console.log( this.mensaje);
+        console.log( this.mensajeESP);
 
                                         //`mailTo:${ this._services.infocontact.email }&subject=Reserva&body=${this.mensaje}`;
-        this.mailto= `mailTo:${ this._services.infocontact.email }?subject=${ this.asunto }&body=${ this.mensaje }`;
+        this.mailto= `mailTo:${ this._services.infocontact.email }?subject=${ this.asunto }&body=${ this.mensajeESP }`;
 
         
 

@@ -93,14 +93,14 @@ export class ItemComponent implements OnInit {
             // let myIdx:number  =  parametros['id'].charAt( parametros['id'].length -1);
              let myIdx2:number  =  parametros['id'].substr(5); //charAt( parametros['id'].length -1);
             
-            console.log(parametros['id']);
+            //console.log(parametros['id']);
             
-            console.log(myIdx2);
+            //console.log(myIdx2);
             //myIdx=(myIdx)/1 -1;
             
             //myIdx--;
             myIdx2--;
-            console.log(myIdx2);
+            //console.log(myIdx2);
 
             // if (myIdx<=0) myIdx=0;             
             //  if (  myIdx  >= this.Num_Max_Prod) myIdx = this.Num_Max_Prod;
@@ -109,15 +109,15 @@ export class ItemComponent implements OnInit {
              if (  myIdx2  >= this.Num_Max_Prod) myIdx2 = this.Num_Max_Prod;
 
             //tomo el idx2
-            console.log(myIdx2.toString());
+            //console.log(myIdx2.toString());
              this._productServices.getProducto_Idx(myIdx2.toString())
               .subscribe( (productidx:Product ) => {
                     
-               console.log(productidx);
+               //console.log(productidx);
              
                 this.product = productidx;
                 this.precioCargado=true;
-                console.log(this.product.precio);
+                //console.log(this.product.precio);
 
                });                 
                  

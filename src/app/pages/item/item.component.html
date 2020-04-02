@@ -119,9 +119,9 @@
     
 
     <!-- Formulario de reserva -->
-  <div  class="col-8 offset-1">
+  <div  class="col-8 offset-1" *ngIf="productDetail&&product">
 
-      <app-contact  [hike]="product.titulo" [product]="product" ></app-contact>
+      <app-contact  [hike]="product.titulo" [product]="product"  [price]="product.precio" [days]="productDetail.subtitulo1" ></app-contact>
   <!-- <div id="paypal-button-container"  > -->
   
   </div>
