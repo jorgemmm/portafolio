@@ -1,0 +1,23 @@
+<p>checkout works!</p>
+
+
+
+<div *ngIf="!paidFor">
+
+    <h1 > {{ hike  }}</h1>
+
+    <h1>
+    Buy this wander  - {{ price | currency:'EUR'  }} 
+    </h1>
+    
+    <p class="lead" > {{ days | uppercase }}</p>
+    
+    <!-- <img width="400" [src] ="product.img"> -->
+    <div *ngIf="!paidFor"></div>
+    
+    </div>
+    
+    <div #paypalcheckout>
+
+    </div>
+    

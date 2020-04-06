@@ -1,0 +1,26 @@
+Cat:
+Anaga: Prod1-Prod3 / project1-project3
+Teide: Prod4-Prod9 / project4-project9
+Masca-teno: Prod9-Prod10 / project9-project10
+Humbold: Prod11 / project11
+
+ANAGA
+Prod1: Anaga
+Prod2:Antequera
+Prod3: chinima
+
+TEIDE
+Prod4:Ascent teide
+Prod5-Prod6:  teide peak -bus/own
+Prod7:Teide naight
+prod8: Teide peak sunset 
+
+MASCA
+prod9: masca
+Prod10:barranco seco
+
+Humbold
+Prod11: humbold
+
+
+Cada carpeta: Main pic-1 pic-2 or Main sunset-1 sunset-2

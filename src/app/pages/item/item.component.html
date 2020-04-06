@@ -36,7 +36,8 @@
       
       <div class="ae-grid ae-grid--collapse au-xs-ptp-1">
         <div class="ae-grid__item item-lg-5 au-lg-ptp-1">
-          <h4 class="ae-u-bolder">{{ productDetail.subtitulo2 }}</h4>
+          <h3 class="ae-u-bolder">{{ productDetail.subtitulo2 }}</h3>
+          <p class=""></p>
           <p class="ae-eta">{{ productDetail.desc2  }} </p>
          
         </div>
@@ -112,71 +113,130 @@
 
  </section>
  
- <div class="container mt-4" >
-  
-  <!-- booking -->
-  <div class="row" *ngIf="isBooking" >
-    
 
-    <!-- Formulario de reserva -->
-  <div  class="col-8 offset-1" *ngIf="productDetail&&product">
 
-      <app-contact  [hike]="product.titulo" [product]="product"  [price]="product.precio" [days]="productDetail.subtitulo1" ></app-contact>
-  <!-- <div id="paypal-button-container"  > -->
-  
-  </div>
+     
 
+ <div align="center"  *ngIf="_productServices.cargando">
+  <h2> Cargando precios </h2>
   
-  <div   class="col-1 ">
-    <!-- <p   *ngIf="!precioCargado" >{{ product.precio }} €</p> -->
-    <!-- <p>{{_productServices.productos[ProdID].precio}}</p> -->
+    <!-- SVG animattion -->
+  <div class="loader loader--style1" title="0">
+      <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+      <path opacity="0.2" fill="#000" d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946
+        s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634
+        c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z"/>
+      <path fill="#000" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0
+        C22.32,8.481,24.301,9.057,26.013,10.047z">
+        <animateTransform attributeType="xml"
+          attributeName="transform"
+          type="rotate"
+          from="0 20 20"
+          to="360 20 20"
+          dur="0.5s"
+          repeatCount="indefinite"/>
+        </path>
+      </svg>
     </div>
-  
-  </div>
+
+  <p>Espere por favor</p>
+
+</div>
 
 
-  <hr>
-                      <!-- *ngIf="isBooking" !isBooking por code -->
-    <div class="row mt-10" >
+
+
+ <!-- <div class="container mt-4" ></div> -->
+ <!-- *ngIf="isBooking" -->
+      <!-- booking -->
+      <div class="row" *ngIf="isBooking&&!_productServices.cargando">
+        
+
+        <!-- Formulario de reserva -->
+          <div  class="col-11" *ngIf="productDetail&&product">
+
+              <app-contact  [hike]="product.titulo" [product]="product"  [price]="product.precio" [days]="productDetail.subtitulo1" ></app-contact>
+          <!-- <div id="paypal-button-container"  > -->
+          
+          </div>
+
+        
+          <div   class="col-1">
+            <!-- <p   *ngIf="!precioCargado" >{{ product.precio }} €</p> -->
+            <!-- <p>{{_productServices.productos[ProdID].precio}}</p> -->
+          </div>
+      
+      </div>
+
+
+       <hr>
+       <!-- paypal local -->
+          <!-- *ngIf="isBooking" !isBooking por code -->
+        <div class="row" *ngIf="product.precio"   >
+            <div   class="col-1 ">
+                <!-- <p   *ngIf="!precioCargado" >{{ product.precio }} €</p> -->
+                <!-- <p>{{_productServices.productos[ProdID].precio}}</p> -->
+            </div>
+
+          
+          <div  class="col-4" *ngIf="!_productServices.cargando" >
+
+              <div *ngIf="!paidFor">
+                <h2>Compralo ya ..!!</h2>
+                <h2>
+                Buy this Hike  : $ {{ product.precio }}  
+                </h2>
+                
+                <p>{{ product.titulo}}</p>    
+                <!-- <img width="400" [src] ="productPayme.img">    -->
+              </div>
+         </div>
+
+        <!-- <div id="paypal-button-container" >
+        
+        </div> -->
+
+        <div class="col-4"   #paypal>  
+          <!-- <script
+          src="https://www.paypal.com/sdk/js?client-id=AfhVJNCZnF_6xgXN1w5peHbbvXBrif-dtabEyOgA9zA7ffHtSKiegcVOo0G8wYsRQ-4pB9gh5NqukT3c&currency=EUR"> 
+          </script> 
+        <script src="js/SDKPaypal.js"></script> -->
+
+        </div>  
+
         <div   class="col-1 ">
-        <!-- <p   *ngIf="!precioCargado" >{{ product.precio }} €</p> -->
-        <!-- <p>{{_productServices.productos[ProdID].precio}}</p> -->
+          <!-- <p   *ngIf="!precioCargado" >{{ product.precio }} €</p> -->
+          <!-- <p>{{_productServices.productos[ProdID].precio}}</p> -->
+        </div>
+        
         </div>
 
-      
-      <div  class="col-4 offset-1">
 
-          <div *ngIf="!paidFor">
-            <h2>Compralo ya ..!!</h2>
-            <h2>
-            Buy this Hike  : $ {{ product.precio}}  
-            </h2>
-            
-            <p>{{ product.titulo}}</p>    
-            <!-- <img width="400" [src] ="productPayme.img">    -->
+
+
+ 
+
+
+
+ <!-- <div class="container mt-6"  > </div> -->
+ 
+      <div class="row"  *ngIf="productDetail&&product" >
+          <div   class="col">
+          
           </div>
-     </div>
+          <div class="col-3 offset-2"  *ngIf="!_productServices.cargando" >
+          
+            <app-checkout  [hike]="product.titulo" [product]="product"  [price]="product.precio" [days]="productDetail.subtitulo1"  ></app-checkout>
 
-    <div id="paypal-button-container"  >
-    
-    </div>
+          </div>
+          <div   class="col">
+          
+          </div>
+      
+      </div>
+ 
 
-    <div class="col-3 offset-2"  #paypal>  
-       <!-- <script
-      src="https://www.paypal.com/sdk/js?client-id=AfhVJNCZnF_6xgXN1w5peHbbvXBrif-dtabEyOgA9zA7ffHtSKiegcVOo0G8wYsRQ-4pB9gh5NqukT3c&currency=EUR"> 
-      </script> 
-    <script src="js/SDKPaypal.js"></script> -->
+ 
 
-    </div>  
-    <div   class="col-1 ">
-      <!-- <p   *ngIf="!precioCargado" >{{ product.precio }} €</p> -->
-      <!-- <p>{{_productServices.productos[ProdID].precio}}</p> -->
-    </div>
-    
-    </div>
-
-
-
-
- </div>
 

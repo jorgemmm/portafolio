@@ -103,8 +103,10 @@ private filtrarProductos(termino: string){
   this.productos.forEach( prod => {
 
         const tituloLower = prod.titulo.toLocaleLowerCase(); 
+        const catLower = prod.categoria.toLocaleLowerCase();
 
-         if( prod.categoria.indexOf(termino) >=0 || tituloLower.indexOf(termino) >=0 ){
+
+         if( catLower.indexOf(termino) >=0 || tituloLower.indexOf(termino) >=0 ){
             this.productoFiltrado.push( prod );
          }
 

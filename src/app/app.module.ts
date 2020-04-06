@@ -28,6 +28,7 @@ import { ItemComponent } from './pages/item/item.component';
 import { SearchComponent } from './pages/search/search.component';
 import { PaymeComponent } from './payme/payme.component';
 import { ContactComponent } from './shared/contact/contact.component';
+import { CheckoutComponent } from './payme/checkout/checkout.component';
 
 
 
@@ -46,7 +47,8 @@ registerLocaleData(localDe);//, 'es-ES');
     ItemComponent,
     SearchComponent,
     PaymeComponent,
-    ContactComponent
+    ContactComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,

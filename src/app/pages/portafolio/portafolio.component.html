@@ -1,42 +1,79 @@
 
 
- <div id="carouselPromotionalImage" class="carousel slide" data-ride="carousel" data-interval="6000" >
-    <div class="carousel-inner">
+ <div id="carouselPromotionalImage" class="carousel slide" data-ride="carousel" data-interval="6000"  >
+  
+  <ol class="carousel-indicators">
+    <li data-target="#carouselPromotionalImage" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselPromotionalImage" data-slide-to="1"> </li>
+    <li data-target="#carouselPromotionalImage" data-slide-to="2"> </li>
+    <li data-target="#carouselPromotionalImage" data-slide-to="3"> </li>
+    <li data-target="#carouselPromotionalImage" data-slide-to="4"> </li>
+    <li data-target="#carouselPromotionalImage" data-slide-to="5"> </li>
+    <li data-target="#carouselPromotionalImage" data-slide-to="6"> </li>
+
+  </ol>  
+
+  <div class="carousel-inner">     
       
-       <div class="carousel-item active">   
-         
+       <div class="carousel-item active">  
           <div class="embed-responsive embed-responsive-16by9">        
-            <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/Yfje3I6dvMs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ObQCj1zxFD8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
-        </div>
-     
+       </div>
+
       <div class="carousel-item">
-         
           <div class="embed-responsive embed-responsive-16by9">        
-            <iframe  class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/ObQCj1zxFD8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/L49gkmxk6ic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>         
+         </div>
+       </div>
+
+
+      <div class="carousel-item">         
+          <div class="embed-responsive embed-responsive-16by9">        
+            <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fvictor.camejo2%2Fvideos%2F3612269732124455%2F&show_text=0&width=560" width="560" height="322" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
           </div>
-      </div>
+      </div> 
+
+      <div class="carousel-item">         
+        <div class="embed-responsive embed-responsive-16by9">        
+          <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fvictor.camejo2%2Fvideos%2F3760423730642387%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+        </div>
+     </div> 
       
+      <div class="carousel-item">         
+        <div class="embed-responsive embed-responsive-16by9">        
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/uYBF8Deqvd0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
       
-      
-      <div class="carousel-item">                       
-        
+      <div class="carousel-item"> 
           <div class="embed-responsive embed-responsive-16by9"> 
             <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/dcrsxcFwLZA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div> 
       </div> 
+      <div class="carousel-item"> 
+        <div class="embed-responsive embed-responsive-16by9"> 
+          <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fvictor.camejo2%2Fvideos%2F2534541729897266%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+        </div> 
+    </div> 
 
+     
+   
     </div>
+
 
     <a class="carousel-control-prev" href="#carouselPromotionalImage" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
       </a>
+
       <a class="carousel-control-next" href="#carouselPromotionalImage" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
   </div>  
+
+
 
   <div class="jumbotron ">
     <h1 class="display-4">Hikking on tenerife with gregorio´s Wanderfamily</h1>
@@ -113,30 +150,36 @@
 
 
   <!-- bootstrap 4 -->
-          <div class="animated faseIn fast" *ngIf="!masonry" >
-            <div class="row">
-              
-              <div class="col mt-3"  *ngFor="let producto of _productosServices.productos;let i=index"     > 
+          <div    class="card-columns"      *ngIf="!masonry" >
+            <!-- <div class="row"> 
+              column-break-inside: avoid   mt-3-->
+             
 
-                <div  *ngIf="i<Num_Max_Prod"  class="card" style="width: 18rem;">
-                  <img src="assets/excursiones/{{ producto.url }}.jpg" class="card-img-top rounded " alt="...">
-                  <div class="card-body bg-primary-card">
-                    <h5 class="card-title">  {{ producto.titulo }} </h5>
-                    <p class="card-text">{{ producto.categoria}}</p>
+                <div   class="animated faseIn fast"  *ngFor="let producto of _productosServices.productos; let i=index"  > 
+
+                  <div   class="card"  style="max-width: 18rem;" *ngIf=" (i<Num_Max_Prod)&&i!=9 " >
+                    <img src="assets/excursiones/{{ producto.url }}.jpg" width="200" class="card-img-top rounded " alt="...">
                    
-                    <a routerLink="/item/{{ producto.cod }}" class="btn btn-primary btn-block"> Buy : {{ producto.precio }} €</a>
-                    <p></p>
-                    <a routerLink="/item/{{ producto.cod }}"   class="btn btn-success btn-block"> book </a>
-                    
+                    <div class="card-body bg-primary-card">
+                      <h5 class="card-title">  {{ producto.titulo }} </h5>
+                      <p class="card-text">{{ producto.categoria}}</p>
+                     
+                      <a routerLink="/item/{{ producto.cod }}" class="btn btn-primary btn-block"> Buy : {{ producto.precio }} €</a>
+                      <p></p>
+                      <a routerLink="/item/{{ producto.cod }}"   class="btn btn-success btn-block"> book </a>
+                      
+                    </div>
                   </div>
-                </div>
-                <!-- 
-                  USAR CLASS = "CARD-COLUMNS"
-                  class="card-columns"
-                  <br><br>
-                <hr> -->
-              
-              </div>
+                  <!-- 
+                    USAR CLASS = "CARD-COLUMNS"
+                    class="card-columns"
+                    <br><br>
+                  <hr> -->
+                
+                
+             
+              <!-- </div> -->
+            
               
             </div>
 
