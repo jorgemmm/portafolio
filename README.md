@@ -1,3 +1,10 @@
+
+# Getting Starter 
+
+After donload or clone project
+npm install
+nmp start
+
 # Portafolio
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.4.
